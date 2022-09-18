@@ -1,5 +1,5 @@
-import React from "react";
-import { devDependencies } from "../../../package.json";
+import React from 'react';
+import { devDependencies } from '../../../package.json';
 
 export function Header() {
   return (
