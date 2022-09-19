@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import { ReactComponent as ReactLogo } from './assets/react.svg';
 import './App.css';
 import { Header } from './components/Header/index';
 
@@ -13,7 +13,8 @@ function App() {
           <img src="/vite.svg" className="logo" alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          {/* <img src={reactLogo} className="logo react" alt="React logo" /> */}
+          <ReactLogo />
         </a>
       </div>
       <Header></Header>
