@@ -42,6 +42,10 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'react/react-in-jsx-scope': 'off',
-    'linebreak-style': [0, 'error', 'windows']
+    'linebreak-style': [0, 'error', 'windows'],
+    // 允许使用any类型
+    '@typescript-eslint/no-explicit-any': 'off',
+    // 组件默认名称
+    'react/display-name': 'off'
   }
 };
