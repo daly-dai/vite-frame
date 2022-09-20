@@ -13,9 +13,6 @@ module.exports = {
        */
 
       version: '999.999.999' // It will default to "detect" in the future
-
-      // "version": "detect"
-      // "version": "16.12.0"
     }
   },
   extends: [
@@ -46,6 +43,10 @@ module.exports = {
     // 允许使用any类型
     '@typescript-eslint/no-explicit-any': 'off',
     // 组件默认名称
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    // 组件传参校验
+    'react/prop-types': 0,
+    'no-unused-vars': 0, //变量声明未被使用校验
+    'react/jsx-uses-react': 2
   }
 };

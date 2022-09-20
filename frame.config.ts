@@ -2,18 +2,18 @@ import { resolve } from 'path';
 
 const alias = {
   '@': resolve(__dirname, 'src'),
-  '@store': resolve('src/store'),
-  '@router': resolve('src/router'),
-  '@hooks': resolve('src/hooks'),
-  '@pages': resolve('src/pages'),
-  '@types': resolve('src/types'),
-  '@components': resolve('src/packages/components'),
-  '@utils': resolve('src/utils'),
-  '@assets': resolve('src/assets'),
-  '@config': resolve('src/config'),
-  '@service': resolve('src/service'),
-  '@packages': resolve('src/packages'),
-  '@plugins': resolve('src/plugins')
+  '@store': resolve(__dirname, 'src/store'),
+  '@router': resolve(__dirname, 'src/router'),
+  '@hooks': resolve(__dirname, 'src/hooks'),
+  '@pages': resolve(__dirname, 'src/pages'),
+  '@types': resolve(__dirname, 'src/types'),
+  '@components': resolve(__dirname, 'src/packages/components'),
+  '@utils': resolve(__dirname, 'src/utils'),
+  '@assets': resolve(__dirname, 'src/assets'),
+  '@config': resolve(__dirname, 'src/config'),
+  '@service': resolve(__dirname, 'src/service'),
+  '@packages': resolve(__dirname, 'src/packages'),
+  '@plugins': resolve(__dirname, 'src/plugins')
 };
 
 const headers: string[] = [];

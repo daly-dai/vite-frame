@@ -1,7 +1,8 @@
 import React from 'react';
+import RouterTree from '@router/index';
 
 function App() {
-  return <div className="App"></div>;
+  return <RouterTree />;
 }
 
 export default App;
