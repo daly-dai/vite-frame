@@ -12,6 +12,8 @@ import svgr from 'vite-plugin-svgr'; // 图片组件化
 import viteImagemin from 'vite-plugin-imagemin'; // 压缩图片
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'; // 合并图标
 
+import { alias } from './frame.config';
+
 // 定义css的全局变量
 const variablePath = normalizePath(
   path.resolve('./src/assets/css/variable.scss')
@@ -90,8 +92,6 @@ export default defineConfig({
   },
   resolve: {
     // 别名配置
-    alias: {
-      '@assets': path.join(__dirname, 'src/assets')
-    }
+    alias
   }
 });

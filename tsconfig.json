@@ -15,8 +15,47 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@packages/*": [
+        "src/packages/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@common/*": [
+        "src/common/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@config/*": [
+        "src/config/*"
+      ],
+      "@router/*": [
+        "src/router/*"
+      ],
+      "@service/*": ["src/service/*"],
+      "@types/*": ["src/types/*"],
+      "@components/*": [
+        "src/packages/components/*"
+      ],
+      "@plugins/*": [
+        "src/plugins/*"
+      ]
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  },
+  "include": ["src/**/*", "./frame.config.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules", "dist","scripts", "build"]
 }
