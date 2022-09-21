@@ -16,6 +16,8 @@ import mkcert from 'vite-plugin-mkcert';
 
 import { alias } from './frame.config';
 
+import proxy from './config/proxy-self';
+
 // 定义css的全局变量
 const variablePath = normalizePath(
   path.resolve('./src/assets/css/variable.scss')
@@ -96,5 +98,10 @@ export default defineConfig({
   resolve: {
     // 别名配置
     alias
+  },
+  server: {
+    host: true,
+    cors: true, // 允许跨域
+    proxy: proxy
   }
 });
