@@ -9,8 +9,10 @@ import viteEslint from 'vite-plugin-eslint';
 
 import svgr from 'vite-plugin-svgr'; // 图片组件化
 
-import viteImagemin from 'vite-plugin-imagemin'; // 压缩图片
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'; // 合并图标
+// import viteImagemin from 'vite-plugin-imagemin'; // 压缩图片
+
+import mkcert from 'vite-plugin-mkcert';
+// import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'; // 合并图标
 
 import { alias } from './frame.config';
 
@@ -36,31 +38,32 @@ export default defineConfig({
     windi(),
     viteEslint(),
     svgr(),
-    viteImagemin({
-      // 无损压缩配置，无损压缩下图片质量不会变差
-      optipng: {
-        optimizationLevel: 7
-      },
-      // 有损压缩配置，有损压缩下图片质量可能会变差
-      pngquant: {
-        quality: [0.8, 0.9]
-      },
-      // svg 优化
-      svgo: {
-        plugins: [
-          {
-            name: 'removeViewBox'
-          },
-          {
-            name: 'removeEmptyAttrs',
-            active: false
-          }
-        ]
-      }
-    }),
-    createSvgIconsPlugin({
-      iconDirs: [path.join(__dirname, 'src/assets/icons')]
-    })
+    // viteImagemin({
+    //   // 无损压缩配置，无损压缩下图片质量不会变差
+    //   optipng: {
+    //     optimizationLevel: 7
+    //   },
+    //   // 有损压缩配置，有损压缩下图片质量可能会变差
+    //   pngquant: {
+    //     quality: [0.8, 0.9]
+    //   },
+    //   // svg 优化
+    //   svgo: {
+    //     plugins: [
+    //       {
+    //         name: 'removeViewBox'
+    //       },
+    //       {
+    //         name: 'removeEmptyAttrs',
+    //         active: false
+    //       }
+    //     ]
+    //   }
+    // }),
+    mkcert()
+    // createSvgIconsPlugin({
+    //   iconDirs: [path.join(__dirname, 'src/assets/icons')]
+    // })
   ],
   css: {
     // 进行 PostCSS 配置
